@@ -4,65 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Strategic Energy Shield (SES)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-       margin: 0;
-  font-family: Arial, sans-serif;
-  background: url('assemblybay.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
-  line-height: 1.6;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('assemblybay.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      width: 100%;
+      padding-bottom: 60px;
     }
 
     header {
-      background: #1c1c3c;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     header h1 {
-      font-size: 2.8em;
       margin: 0;
+      font-size: 1.5em;
+      font-weight: 600;
     }
 
-    header p {
+    nav a {
+      color: #39ffcc;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h2 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
       font-size: 1.2em;
-      margin-top: 10px;
+      max-width: 700px;
+      margin: 0 auto;
       color: #ccc;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     section h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
+      font-size: 1.8em;
       color: #39ffcc;
+      border-bottom: 1px solid #444;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
     }
 
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero p {
-      font-size: 1.4em;
-      color: #b0e0e6;
+    ul {
+      padding-left: 20px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #1c1c3c;
-      color: #888;
+      background: rgba(0, 0, 0, 0.6);
+      color: #999;
       font-size: 0.9em;
-    }
-
-    a {
-      color: #39ffcc;
+      position: relative;
+      z-index: 10;
     }
 
     .button {
@@ -78,62 +107,60 @@
   </style>
 </head>
 <body>
+  <div class="overlay">
+    <header>
+      <h1>Strategic Energy Shield</h1>
+      <nav>
+        <a href="#mission">Mission</a>
+        <a href="#how">How It Works</a>
+        <a href="#why">Why Now</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <header>
-    <h1>Strategic Energy Shield (SES)</h1>
-    <p>Powering the AI Age from Space</p>
-  </header>
+    <div class="hero">
+      <h2>Powering the AI Age from Space</h2>
+      <p>
+        The Strategic Energy Shield is a next-generation orbital solar energy system engineered to deliver uninterrupted, secure power to Earth and Mars. It’s our moonshot for a renewable, AI-driven future.
+      </p>
+    </div>
 
-  <section class="hero">
-    <p>
-      SES is a revolutionary space-based solar power array designed to beam clean, abundant energy directly to Earth and beyond.
-      Built for the age of artificial intelligence, climate urgency, and national resilience.
-    </p>
-  </section>
+    <section id="mission">
+      <h2>The Mission</h2>
+      <p>
+        SES will secure American energy independence through a scalable, modular solar array stationed in geostationary orbit. Designed for resilience, built to power the next century.
+      </p>
+    </section>
 
-  <section>
-    <h2>The Mission</h2>
-    <p>
-      To ensure the United States and its allies achieve permanent energy independence by deploying the world’s first orbital solar array—capable of powering entire nations with zero emissions.
-    </p>
-  </section>
+    <section id="how">
+      <h2>How It Works</h2>
+      <ul>
+        <li>Orbiting 4,000+ km² solar array with autonomous and human-assisted expansion</li>
+        <li>Energy transmission via phased microwave or laser relay satellites</li>
+        <li>Ground receivers + megabattery infrastructure for uninterrupted baseload power</li>
+        <li>Robotic and human fabrication hubs in orbit</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>How It Works</h2>
-    <ul>
-      <li>Massive photovoltaic array in geostationary orbit</li>
-      <li>Power beamed to Earth via microwave or laser transmission</li>
-      <li>Autonomous and human-assisted construction in orbit</li>
-      <li>Redundant satellite-to-Earth relays and battery storage</li>
-    </ul>
-  </section>
+    <section id="why">
+      <h2>Why Now?</h2>
+      <p>
+        AI workloads are exploding. Grid reliability is declining. Terrestrial renewables are intermittent and geopolitically fragile. SES offers a sovereign, scalable energy solution ready to meet future global demands.
+      </p>
+    </section>
 
-  <section>
-    <h2>Why Now?</h2>
-    <p>
-      With global AI workloads exploding and terrestrial renewables falling short, SES provides a scalable, ultra-reliable solution—unaffected by night, weather, or geopolitics.
-    </p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Built by <strong>Nocturnal Security, LLC</strong><br>
+        Email: <a href="mailto:spencer@nocturnalsecurity.io">spencer@nocturnalsecurity.io</a><br>
+        Want to support SES? <a class="button" href="mailto:spencer@nocturnalsecurity.io">Join the Mission</a>
+      </p>
+    </section>
 
-  <section>
-    <h2>Get Involved</h2>
-    <p>
-      We are currently building momentum. Join our mission and stay updated as we launch public engagement and private partnerships.
-    </p>
-    <a class="button" href="mailto:spencer@nocturnalsecurity.io">Join the SES Mailing List</a>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>
-      SES is developed by <strong>Nocturnal Security, LLC</strong>.<br>
-      Contact: <a href="mailto:spencer@nocturnalsecurity.io">spencer@nocturnalsecurity.io</a>
-    </p>
-  </section>
-
-  <footer>
-    &copy; 2025 Strategic Energy Shield (SES) – All rights reserved.
-  </footer>
-
+    <footer>
+      &copy; 2025 Strategic Energy Shield. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
