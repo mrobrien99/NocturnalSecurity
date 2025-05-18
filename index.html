@@ -1,166 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nocturnal Security, LLC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: url('assemblybay.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.75);
-      min-height: 100vh;
-      width: 100%;
-      padding-bottom: 60px;
-    }
-
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.5em;
-      font-weight: 600;
-    }
-
-    nav a {
-      color: #39ffcc;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-    }
-
-    .hero h2 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: 0 auto;
-      color: #ccc;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section h2 {
-      font-size: 1.8em;
-      color: #39ffcc;
-      border-bottom: 1px solid #444;
-      padding-bottom: 6px;
-      margin-bottom: 12px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #999;
-      font-size: 0.9em;
-      position: relative;
-      z-index: 10;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #39ffcc;
-      color: #000;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nocturnal Security, LLC</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 1.5rem;
+        }
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #0ff;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('ses_animation.gif') no-repeat center center/cover;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero a {
+            background-color: #0ff;
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        h3 {
+            color: #0ff;
+            margin-bottom: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #0ff;
+            color: #000;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .social {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        .social a {
+            color: #0ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <div class="overlay">
     <header>
-      <h1>Nocturnal Security, LLC</h1>
-      <nav>
-        <a href="#mission">Mission</a>
-        <a href="#how">How It Works</a>
-        <a href="#why">Why Now</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <h1>Nocturnal Security, LLC</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#vision">Vision</a>
+            <a href="#investors">Investors</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <div class="hero">
-      <h2>Powering the AI Age from Space</h2>
-      <p>
-        The Strategic Energy Shield is a next-generation orbital solar energy system engineered to deliver uninterrupted, secure power to Earth and Mars. It’s our moonshot for a renewable, AI-driven future.
-      </p>
+        <div class="hero-content">
+            <h2>Powering the Next Century of Civilization</h2>
+            <p>Backed by science. Driven by purpose.</p>
+            <a href="https://raw.githubusercontent.com/mrobrien99/NocturnalSecurity/main/SES_Pitch_Deck.pdf" download>Download Pitch Deck</a>
+        </div>
     </div>
 
-    <section id="mission">
-      <h2>The Mission</h2>
-      <p>
-        SES will secure American energy independence through a scalable, modular solar array stationed in geostationary orbit. Designed for resilience, built to power the next century.
-      </p>
+    <section id="about">
+        <h3>About the SES</h3>
+        <p>The Strategic Energy Shield (SES) is a revolutionary orbital energy system designed to solve the 21st century’s most critical energy challenges — by collecting solar power in space and safely transmitting it to Earth.</p>
     </section>
 
-    <section id="how">
-      <h2>How It Works</h2>
-      <ul>
-        <li>Orbiting 4,000+ km² solar array with autonomous and human-assisted expansion</li>
-        <li>Energy transmission via phased microwave or laser relay satellites</li>
-        <li>Ground receivers + megabattery infrastructure for uninterrupted baseload power</li>
-        <li>Robotic and human fabrication hubs in orbit</li>
-      </ul>
+    <section id="vision">
+        <h3>Founder’s Vision</h3>
+        <p>At Nocturnal Security, our vision is to build frontier technologies that secure the future — of energy, of civilization, and of freedom. We believe the path to sustainable power and global security begins above the Earth.</p>
     </section>
 
-    <section id="why">
-      <h2>Why Now?</h2>
-      <p>
-        AI workloads are exploding. Grid reliability is declining. Terrestrial renewables are intermittent and geopolitically fragile. SES offers a sovereign, scalable energy solution ready to meet future global demands.
-      </p>
+    <section id="investors">
+        <h3>Partner With Us</h3>
+        <p>If you're an investor, technologist, or visionary who wants to be part of humanity’s next great leap — reach out. Let’s build the SES together.</p>
+        <iframe src="https://raw.githubusercontent.com/mrobrien99/NocturnalSecurity/main/SES_Pitch_Deck.pdf" width="100%" height="600px" style="border: none;"></iframe>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Built by <strong>Nocturnal Security, LLC</strong><br>
-        Email: <a href="mailto:spencer@nocturnalsecurity.io">spencer@nocturnalsecurity.io</a><br>
-        Want to support SES? <a class="button" href="mailto:spencer@nocturnalsecurity.io">Join the Mission</a>
-      </p>
+        <h3>Contact</h3>
+        <form action="mailto:spencer@nocturnalsecurity.io" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <footer>
-      &copy; 2025 Strategic Energy Shield. All rights reserved.
-    </footer>
-  </div>
+    <div class="social">
+        <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
+    </div>
 </body>
 </html>
+
