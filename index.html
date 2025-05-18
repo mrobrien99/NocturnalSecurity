@@ -36,14 +36,21 @@
             color: #fff;
         }
         .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: url('assemblybay.jpg') no-repeat center center/cover;
-            text-align: center;
-            padding-top: 60px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('assemblybay.jpg') no-repeat center center/cover;
+    animation: backgroundMove 30s linear infinite;
+    text-align: center;
+    padding-top: 60px;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: center center; }
+    50% { background-position: center top; }
+    100% { background-position: center center; }
+}
         .hero-content {
             background-color: rgba(0, 0, 0, 0.6);
             padding: 2rem;
