@@ -1,164 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nocturnal Security, LLC</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        header h1 {
-            font-size: 1.5rem;
-        }
-        nav a {
-            margin-left: 1.5rem;
-            text-decoration: none;
-            color: #0ff;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #fff;
-        }
-        .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: url('assemblybay.jpg') no-repeat center center/cover;
-    animation: backgroundMove 30s linear infinite;
-    text-align: center;
-    padding-top: 60px;
-}
-
-@keyframes backgroundMove {
-    0% { background-position: center center; }
-    50% { background-position: center top; }
-    100% { background-position: center center; }
-}
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2rem;
-            border-radius: 1rem;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .hero a {
-            background-color: #0ff;
-            color: #000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 4rem 2rem;
-            max-width: 800px;
-            margin: auto;
-        }
-        h3 {
-            color: #0ff;
-            margin-bottom: 1rem;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea {
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            border: none;
-            font-size: 1rem;
-        }
-        button {
-            background-color: #0ff;
-            color: #000;
-            padding: 0.75rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .social {
-            text-align: center;
-            padding-bottom: 2rem;
-        }
-        .social a {
-            color: #0ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nocturnal Security</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Nocturnal Security, LLC</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#vision">Vision</a>
-            <a href="#investors">Investors</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Nocturnal Security</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#ses">Strategic Energy Shield</a></li>
+        <li><a href="#vigilant">Vigilant Front</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#simulations">Simulations</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h2>Powering the Next Century of Civilization</h2>
-            <p>Backed by science. Driven by purpose.</p>
-            <a href="https://docs.google.com/presentation/d/1x61dAel8XbGtnyf4R5h2ffvpFyzd4GJv/edit?usp=sharing" target="_blank">Download Pitch Deck</a>
-        </div>
-    </div>
+  <section id="home">
+    <h2>Defense-First Innovation in Energy & Security</h2>
+    <p>Welcome to Nocturnal Security. We build bold, scalable solutions for energy resilience and crisis defense.</p>
+  </section>
 
-    <section id="about">
-        <h3>About the SES</h3>
-        <p>The Strategic Energy Shield (SES) is a revolutionary orbital energy system designed to solve the 21st century’s most critical energy challenges — by collecting solar power in space and safely transmitting it to Earth.</p>
-    </section>
+  <section id="ses">
+    <h2>Strategic Energy Shield (SES)</h2>
+    <p>SES is a geostationary orbital platform designed to beam clean, continuous energy back to Earth and beyond. It protects against debris, supports planetary power independence, and uses quantum-encrypted controls.</p>
+    <p><a href="#contact">Get involved or learn more</a></p>
+  </section>
 
-    <section id="vision">
-        <h3>Founder’s Vision</h3>
-        <p>At Nocturnal Security, our vision is to build frontier technologies that secure the future — of energy, of civilization, and of freedom. We believe the path to sustainable power and global security begins above the Earth.</p>
-    </section>
+  <section id="vigilant">
+    <h2>Vigilant Front</h2>
+    <p>Vigilant Front is a USPTO-filed AI-driven lockdown and threat response system for schools. It features real-time threat detection (gun, gait, voice stress, pressure, and clothing anomalies), autonomous lockdown, Crisis Chat, adversarial confusion, and responder integration.</p>
+    <p><a href="#contact">Partner or invest</a></p>
+  </section>
 
-    <section id="investors">
-        <h3>Partner With Us</h3>
-        <p>If you're an investor, technologist, or visionary who wants to be part of humanity’s next great leap — reach out. Let’s build the SES together.</p>
-        <p><a href="https://docs.google.com/presentation/d/1x61dAel8XbGtnyf4R5h2ffvpFyzd4GJv/edit?usp=sharing" target="_blank" style="color:#0ff; text-decoration:underline;">View the SES Pitch Deck (opens in new tab)</a></p>
-    </section>
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Coming soon: Updates, insights, and behind-the-scenes looks at our projects.</p>
+  </section>
 
-    <section id="contact">
-        <h3>Contact</h3>
-        <form action="mailto:spencer@nocturnalsecurity.io" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email us at: contact@nocturnalsecurity.io</p>
+  </section>
 
-    <div class="social">
-        <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
-    </div>
+  <section id="simulations">
+    <h2>Simulations</h2>
+    <p>Coming soon: Interactive demos and footage of SES and Vigilant Front in action.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nocturnal Security LLC</p>
+  </footer>
 </body>
 </html>
