@@ -41,13 +41,18 @@
     justify-content: center;
     height: 100vh;
     background: url('assemblybay.jpg') no-repeat center center/cover;
-    animation: backgroundMove 30s linear infinite;
+    animation: backgroundMove 20s ease-in-out infinite;
     text-align: center;
     padding-top: 60px;
 }
 
 @keyframes backgroundMove {
     0% { background-position: center center; }
+    25% { background-position: left top; }
+    50% { background-position: center bottom; }
+    75% { background-position: right top; }
+    100% { background-position: center center; }
+}
     50% { background-position: center top; }
     100% { background-position: center center; }
 }
@@ -116,13 +121,13 @@
     <header>
         <h1>Nocturnal Security, LLC</h1>
         <nav>
-    <a href="#about">About</a>
-    <a href="#vision">Vision</a>
-    <a href="#investors">Investors</a>
-    <a href="#contact">Contact</a>
-    <a href="#vigilant">Vigilant Front</a>
-    <a href="#ses">SES</a>
-    <a href="#blog">Blog</a>
+    <a href="about.html">About</a>
+    <a href="vision.html">Vision</a>
+    <a href="investors.html">Investors</a>
+    <a href="contact.html">Contact</a>
+    <a href="vigilant.html">Vigilant Front</a>
+    <a href="ses.html">SES</a>
+    <a href="blog.html">Blog</a>
 </nav>
     </header>
 
