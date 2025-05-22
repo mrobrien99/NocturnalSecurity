@@ -1,113 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nocturnal Security, LLC</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        header h1 {
-            font-size: 1.5rem;
-        }
-        nav a {
-            margin-left: 1.5rem;
-            text-decoration: none;
-            color: #0ff;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #fff;
-        }
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: url('assemblybay.jpg') no-repeat center center/cover;
-            animation: backgroundMove 20s ease-in-out infinite;
-            text-align: center;
-            padding-top: 60px;
-        }
-        @keyframes backgroundMove {
-            0% { background-position: center center; }
-            25% { background-position: left top; }
-            50% { background-position: center bottom; }
-            75% { background-position: right top; }
-            100% { background-position: center center; }
-        }
-        .hero-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2rem;
-            border-radius: 1rem;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .hero a {
-            background-color: #0ff;
-            color: #000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .social {
-            text-align: center;
-            padding-bottom: 2rem;
-        }
-        .social a {
-            color: #0ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nocturnal Security, LLC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #0ff;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('assemblybay.jpg') no-repeat center center/cover;
+      animation: backgroundMove 20s ease-in-out infinite;
+      text-align: center;
+      padding-top: 60px;
+    }
+    @keyframes backgroundMove {
+      0% { background-position: center center; }
+      25% { background-position: left top; }
+      50% { background-position: center bottom; }
+      75% { background-position: right top; }
+      100% { background-position: center center; }
+    }
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background-color: #0ff;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .project-card {
+      border: 1px solid #0ff;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 1rem auto;
+      max-width: 800px;
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #0ff;
+    }
+    .project-card a {
+      color: #0ff;
+      text-decoration: underline;
+    }
+    .social {
+      text-align: center;
+      padding: 2rem 0;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Nocturnal Security, LLC</h1>
-        <nav>
-            <a href="about.html">About</a>
-            <a href="vision.html">Vision</a>
-            <a href="investors.html">Investors</a>
-            <a href="contact.html">Contact</a>
-            <a href="vigilant.html">Vigilant Front</a>
-            <a href="ses.html">SES</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Nocturnal Security, LLC</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="vision.html">Vision</a>
+      <a href="investors.html">Investors</a>
+      <a href="contact.html">Contact</a>
+      <a href="vigilant.html">Vigilant Front</a>
+      <a href="ses.html">SES</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h2>Powering the Next Century of Civilization</h2>
-            <p>Backed by science. Driven by purpose.</p>
-            <a href="https://docs.google.com/presentation/d/1x61dAel8XbGtnyf4R5h2ffvpFyzd4GJv/edit?usp=sharing" target="_blank">Download Pitch Deck</a>
-        </div>
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Powering the Next Century of Civilization</h2>
+      <p>Backed by science. Driven by purpose.</p>
+      <a href="https://docs.google.com/presentation/d/1x61dAel8XbGtnyf4R5h2ffvpFyzd4GJv/edit?usp=sharing" target="_blank">Download Pitch Deck</a>
     </div>
+  </div>
 
-    <div class="social">
-        <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
+  <section>
+    <h2>Our Projects</h2>
+    <div class="project-card">
+      <h3>Vigilant Front</h3>
+      <p>An AI-assisted lockdown system for schools and high-risk buildings that detects threats and deploys security protocols in real time.</p>
+      <a href="vigilant.html">Explore Vigilant Front →</a>
     </div>
+    <div class="project-card">
+      <h3>Strategic Energy Shield (SES)</h3>
+      <p>A massive space-based solar array that beams uninterrupted power to Earth and Mars, supporting the future of civilization.</p>
+      <a href="ses.html">Learn More about SES →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Get Involved</h2>
+    <p>Partner with us to shape the future of security, energy, and civilization. View our pitch deck or contact us to learn more.</p>
+    <a href="contact.html">Contact Us</a>
+  </section>
+
+  <div class="social">
+    <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
+  </div>
 </body>
 </html>
