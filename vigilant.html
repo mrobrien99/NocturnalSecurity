@@ -46,7 +46,7 @@
       display: none;
       margin: 2rem 0;
     }
-    .log {
+    .log, .chat {
       background-color: #111;
       border: 1px solid #0ff;
       padding: 1rem;
@@ -55,7 +55,7 @@
       max-height: 300px;
       overflow-y: auto;
     }
-    .log p {
+    .log p, .chat p {
       margin: 0.5rem 0;
       font-size: 0.95rem;
     }
@@ -68,6 +68,28 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .zone {
+      background-color: green;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+    }
+    .zone.alert {
+      background-color: red;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
     }
     .social {
       text-align: center;
@@ -98,8 +120,21 @@
 
     <div id="banner" class="banner">LOCKDOWN IN PROGRESS</div>
 
+    <div class="grid">
+      <div class="zone">Lobby</div>
+      <div class="zone">Cafeteria</div>
+      <div class="zone alert">East Wing</div>
+      <div class="zone">Library</div>
+    </div>
+
     <div class="log" id="log">
       <p><em>System initialized. Monitoring active...</em></p>
+    </div>
+
+    <div class="chat" id="chat">
+      <p><strong>Faculty Crisis Chat</strong></p>
+      <p><em>Principal:</em> All teachers please lock doors now.</p>
+      <p><em>Ms. Lane:</em> Room B2 secure. 18 students accounted for.</p>
     </div>
   </main>
 
@@ -112,10 +147,9 @@
     const banner = document.getElementById("banner");
     const threats = [
       "🔍 Suspicious motion detected in Hallway C",
-      "🚨 Gun-like object detected in East Entrance",
+      "🚨 Gun-like object detected in East Wing",
       "📸 Unrecognized face near Server Room",
-      "⚠️ Panic button triggered in Classroom B3",
-      "🎤 Aggressive shouting detected in Cafeteria"
+      "⚠️ Panic button triggered in Classroom B3"
     ];
 
     function triggerLockdown() {
