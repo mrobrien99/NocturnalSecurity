@@ -1,52 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact – Nocturnal Security</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Poppins', sans-serif;
-            padding: 2rem;
-        }
-        h1 {
-            color: #0ff;
-        }
-        a {
-            color: #0ff;
-            text-decoration: none;
-        }
-        input, textarea {
-            display: block;
-            margin-bottom: 1rem;
-            padding: 0.75rem;
-            width: 100%;
-            max-width: 600px;
-            border-radius: 0.5rem;
-            border: none;
-            font-size: 1rem;
-        }
-        button {
-            background-color: #0ff;
-            color: #000;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Nocturnal Security</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      padding: 6rem 2rem 2rem;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      color: #0ff;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    h1 {
+      color: #0ff;
+    }
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    .social {
+      text-align: center;
+      padding: 2rem 0;
+      font-weight: bold;
+    }
+    input, textarea {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 0.5rem;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #0ff;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Nocturnal Security, LLC</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="vision.html">Vision</a>
+      <a href="investors.html">Investors</a>
+      <a href="contact.html">Contact</a>
+      <a href="vigilant.html">Vigilant Front</a>
+      <a href="ses.html">SES</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main>
     <h1>Contact Us</h1>
     <form action="mailto:spencer@nocturnalsecurity.io" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-    <p><a href="index.html">← Back to Home</a></p>
+  </main>
+
+  <div class="social">
+    <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
+  </div>
 </body>
 </html>
