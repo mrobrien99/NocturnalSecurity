@@ -17,13 +17,13 @@ export default function App() {
   return (
     <div style={{ width: '100vw', height: '100vh', backgroundColor: 'black', color: 'white' }}>
       <div className="absolute top-0 left-0 p-4 z-10">
-        <h1 className="text-xl font-bold">SES Orbital Deployment</h1>
+        <h1 className="text-xl font-bold">ASTRIAN-2 Orbital Deployment</h1>
         <p>Deployed Area: {deployedArea} km²</p>
         <button
           onClick={handleDeploy}
           className="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded"
         >
-          Deploy More SES
+          Deploy More ASTRIAN-2 (press this button to watch ASTRIAN-2 deploy)
         </button>
       </div>
 
