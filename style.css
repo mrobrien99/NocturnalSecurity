@@ -1,37 +1,82 @@
+/* Global base styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header and navigation */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #6df2e6;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #6df2e6;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e0f7f4;
+}
+
+/* Hero section for both index and Descartes */
 .hero {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: url('assemblybay.jpg') center center / cover no-repeat;
-  padding: 5rem 2rem;
+  min-height: 70vh;
+  background: url('assemblybay.jpg') no-repeat center center/cover;
   text-align: center;
+  padding: 3rem 2rem;
   overflow: hidden;
 }
 
-/* Dark overlay to fix visibility */
-.hero-overlay {
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65); /* darker and reliable */
-  z-index: 1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 0;
 }
 
-/* Text block on top of overlay */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 800px;
   background: none;
   padding: 2rem;
-  color: #ffffff;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.8); /* ensures legibility */
+  color: #f0f0f0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
+/* Hero text */
 .hero h2 {
   font-size: 2.5rem;
   color: #6df2e6;
@@ -42,4 +87,82 @@
   font-size: 1.2rem;
   color: #f0f0f0;
   margin-bottom: 2rem;
+}
+
+/* CTA buttons */
+.hero a,
+.hero-button,
+section a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: #6df2e6;
+  color: #111;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hero-button:hover,
+.hero a:hover,
+section a:hover {
+  background-color: #4cbcb3;
+  color: #000;
+}
+
+/* Section layout */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  background: #151515;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  color: #6df2e6;
+}
+
+section p,
+section ul {
+  color: #ccc;
+}
+
+/* Lists */
+ul {
+  text-align: left;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+}
+
+/* Project cards */
+.project-card {
+  border: 1px solid #4cbcb3;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background: #151515;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #6df2e6;
+}
+
+.project-card a {
+  color: #6df2e6;
+  text-decoration: underline;
+}
+
+/* Footer / Social */
+.social {
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: bold;
 }
