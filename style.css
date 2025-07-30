@@ -1,0 +1,131 @@
+/* Global base styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #4ecdc4;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #4ecdc4;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f8f8f8;
+}
+
+/* Hero banner */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000 center center/cover no-repeat;
+  animation: backgroundMove 20s ease-in-out infinite;
+  text-align: center;
+  padding-top: 60px;
+}
+
+@keyframes backgroundMove {
+  0% { background-position: center center; }
+  25% { background-position: left top; }
+  50% { background-position: center bottom; }
+  75% { background-position: right top; }
+  100% { background-position: center center; }
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero a,
+.hero-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: #4ecdc4;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Section blocks */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+  max-width: 700px;
+  margin: 2rem auto;
+  line-height: 1.8;
+}
+
+/* Project card blocks */
+.project-card {
+  border: 1px solid #4ecdc4;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #4ecdc4;
+}
+
+.project-card a {
+  color: #4ecdc4;
+  text-decoration: underline;
+}
+
+/* Footer / Social */
+.social {
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: bold;
+}
