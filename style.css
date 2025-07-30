@@ -1,41 +1,18 @@
-/* Update highlights */
-header h1,
-h2, h3, h4 {
-  color: #6df2e6;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('assemblybay.jpg') no-repeat center center/cover;
+  animation: backgroundMove 20s ease-in-out infinite;
+  text-align: center;
+  padding-top: 60px;
 }
 
-/* Navigation links */
-nav a {
-  color: #6df2e6;
-}
-
-nav a:hover {
-  color: #e0f7f4;
-}
-
-/* Project cards + sections */
-.project-card,
-section {
-  background: #151515;
-  border: 1px solid #4cbcb3;
-}
-
-/* CTA buttons */
-a.hero-button,
-section a {
-  background: #6df2e6;
-  color: #111;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
-}
-
-a.hero-button:hover,
-section a:hover {
-  background: #4cbcb3;
-  color: #000;
+@keyframes backgroundMove {
+  0% { background-position: center center; }
+  25% { background-position: left top; }
+  50% { background-position: center bottom; }
+  75% { background-position: right top; }
+  100% { background-position: center center; }
 }
