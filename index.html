@@ -51,3 +51,22 @@
   </nav>
 </footer>
 
+<style>
+/* NAV + HEADER REPAIR KIT */
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#111}
+.site-header a{color:#111;text-decoration:none}
+.site-header a:hover{text-decoration:underline}
+.hero::before,.hero::after,.hero .overlay{pointer-events:none}
+.hero::before,.hero::after{z-index:0}
+.site-header{z-index:10}
+.site-header,.site-header *{mix-blend-mode:normal!important;filter:none!important}
+*{box-sizing:border-box}
+html,body{width:100%;overflow-x:hidden}
+.site-header .inner{max-width:1200px;margin:0 auto;padding:12px clamp(16px,2.5vw,24px);display:flex;align-items:center;gap:16px;padding-right:max(16px,env(safe-area-inset-right));padding-left:max(16px,env(safe-area-inset-left))}
+.site-logo{flex:0 0 auto}
+.site-nav{margin-left:auto;display:flex;gap:clamp(10px,1.5vw,20px);align-items:center;flex-wrap:wrap}
+.site-nav a{padding:.45rem .7rem;border-radius:10px}
+.site-nav a:hover{background:#f3f4f6}
+.w-100vw,.full-bleed{width:100%!important}
+</style>
+
