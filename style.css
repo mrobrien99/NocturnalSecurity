@@ -166,3 +166,55 @@ ul {
   padding: 2rem 0;
   font-weight: bold;
 }
+
+/* === NAV + HEADER REPAIR KIT === */
+
+/* 1) Make the header readable and above any dark hero overlay */
+.site-header{
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255,255,255,.92);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  color: #111;
+}
+.site-header a{ color:#111; text-decoration:none; }
+.site-header a:hover{ text-decoration:underline; }
+
+/* If a hero overlay is darkening the header, neuter it */
+.hero::before, .hero::after, .hero .overlay{
+  pointer-events: none;           /* overlay shouldn’t eat clicks */
+}
+.hero::before, .hero::after{ z-index: 0; }
+.site-header{ z-index: 10; }      /* keep header above overlays */
+.site-header, .site-header *{
+  mix-blend-mode: normal !important;  /* kill accidental blend modes */
+  filter: none !important;
+}
+
+/* 2) Stop the right tabs from being cut off */
+*{ box-sizing: border-box; }
+html, body{ width:100%; overflow-x:hidden; }   /* avoid 100vw scrollbar shove */
+
+.site-header .inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px clamp(16px, 2.5vw, 24px);
+  display: flex; align-items: center; gap: 16px;
+  padding-right: max(16px, env(safe-area-inset-right)); /* iOS notch safety */
+  padding-left:  max(16px, env(safe-area-inset-left));
+}
+
+.site-logo{ flex: 0 0 auto; }
+.site-nav{
+  margin-left: auto;              /* pushes nav to the right inside container */
+  display: flex; gap: clamp(10px, 1.5vw, 20px);
+  align-items: center; flex-wrap: wrap;       /* wrap instead of clipping */
+}
+
+.site-nav a{
+  padding: .45rem .7rem; border-radius: 10px;
+}
+.site-nav a:hover{ background:#f3f4f6; }
+
+/* If you used width:100vw anywhere on wrappers, force it to 100% */
+.w-100vw, .full-bleed{ width: 100% !important; }
+
