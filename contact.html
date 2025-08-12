@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – Nocturnal Security</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-only spacing -->
+  <style>
+    .push-down-xxl { padding-top: clamp(8rem, 14vh, 16rem); }
+    @media (max-width: 640px) { .push-down-xxl { padding-top: 7rem; } }
+  </style>
 </head>
 <body>
- <header>
-  <h1>Nocturnal Security, LLC</h1>
-  <nav>
-    <a href="about.html">About</a>
-    <a href="descarte.html">Descarte</a>
-    <a href="helionus.html">Helionus</a>
-    <a href="consulting.html">Consulting</a>
-    <a href="astrian.html">Astrian-2</a>
-    <a href="investors.html">Investors</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>Nocturnal Security, LLC</h1>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="descarte.html">Descarte</a>
+      <a href="helionus.html">Helionus</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="astrian.html">Astrian-2</a>
+      <a href="investors.html">Investors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-
-  <main>
-    <h2 class="push-down-10">Contact</h2>
+  <!-- Push the entire content down -->
+  <main class="push-down-xxl">
+    <h2>Contact</h2>
     <form action="https://formsubmit.co/spencer@nocturnalsecurity.io" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -32,7 +38,7 @@
   </main>
 
   <div class="social">
-    <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
+    <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank" rel="noopener">LinkedIn: Spencer O'Brien</a></p>
   </div>
 </body>
 </html>
