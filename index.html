@@ -5,30 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nocturnal Security, LLC</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- NAV + HEADER REPAIR KIT (loads AFTER your main CSS so it wins) -->
+  <style>
+    .site-header{
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,.92);
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+      color:#111;
+    }
+    .site-header a{ color:#111; text-decoration:none; }
+    .site-header a:hover{ text-decoration:underline; }
+
+    /* Keep header above any hero overlays and stop overlays eating clicks */
+    .hero::before,.hero::after,.hero .overlay,.hero-overlay{ pointer-events: none; }
+    .hero::before,.hero::after,.hero .overlay,.hero-overlay{ z-index: 0; }
+    .site-header{ z-index: 10; }
+    .site-header, .site-header *{ mix-blend-mode: normal !important; filter: none !important; }
+
+    /* Prevent horizontal clipping and layout shove from 100vw */
+    *{ box-sizing: border-box; }
+    html, body{ width:100%; overflow-x: hidden; }
+
+    /* Header layout */
+    .site-header .inner{
+      max-width: 1200px; margin: 0 auto;
+      padding: 12px clamp(16px, 2.5vw, 24px);
+      display: flex; align-items: center; gap: 16px;
+      padding-right: max(16px, env(safe-area-inset-right));
+      padding-left:  max(16px, env(safe-area-inset-left));
+    }
+    .site-logo{ flex: 0 0 auto; }
+    .site-nav{
+      margin-left: auto; display: flex; gap: clamp(10px,1.5vw,20px);
+      align-items: center; flex-wrap: wrap; /* wrap instead of clipping */
+    }
+    .site-nav a{ padding: .45rem .7rem; border-radius: 10px; }
+    .site-nav a:hover{ background: #f3f4f6; }
+
+    /* If you used 100vw elsewhere, force to 100% */
+    .w-100vw, .full-bleed{ width: 100% !important; }
+  </style>
 </head>
+
 <body>
-  <header>
-    <h1>Nocturnal Security, LLC</h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="descartes.html">Descartes</a>
-      <a href="helionus.html">Helionus</a>
-      <a href="consulting.html">Consulting</a>
-      <a href="astrian.html">Astrian-2</a>
-      <a href="investors.html">Investors</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Updated header markup with classes the CSS targets -->
+  <header class="site-header">
+    <div class="inner">
+      <a class="site-logo" href="/">Nocturnal Security, LLC</a>
+      <nav class="site-nav">
+        <a href="about.html">About</a>
+        <a href="descartes.html">Descartes</a>
+        <a href="helionus.html">Helionus</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="astrian.html">Astrian-2</a>
+        <a href="investors.html">Investors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-<div class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h2>Powering the Next Century of Civilization</h2>
-    <p>Built by Americans. Powered from space.</p>
-    <a href="https://docs.google.com/presentation/d/1i9QrdxMoaed_NxrW28xlImDdJuC9aTc0/edit?usp=sharing&ouid=118355398278003671690&rtpof=true&sd=true" target="_blank">
-      📄 View Our Updated Pitch Deck
-    </a>
+
+  <div class="hero">
+    <!-- Your overlay already uses .hero-overlay, so we target that in CSS above -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Powering the Next Century of Civilization</h2>
+      <p>Built by Americans. Powered from space.</p>
+      <a href="https://docs.google.com/presentation/d/1i9QrdxMoaed_NxrW28xlImDdJuC9aTc0/edit?usp=sharing&ouid=118355398278003671690&rtpof=true&sd=true" target="_blank" rel="noopener">
+        📄 View Our Updated Pitch Deck
+      </a>
+    </div>
   </div>
-</div>
 
   <section>
     <h2>Get Involved</h2>
@@ -37,36 +84,20 @@
   </section>
 
   <div class="social">
-    <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank">LinkedIn: Spencer O'Brien</a></p>
+    <p>Connect on <a href="https://www.linkedin.com/in/spencer-o-brien" target="_blank" rel="noopener">LinkedIn: Spencer O'Brien</a></p>
   </div>
+
+  <!-- Move footer inside <body> where it belongs -->
+  <footer class="site-footer">
+    <nav class="legal-links" style="margin-top:1rem;font-size:.95rem">
+      <a href="/sms-opt-in.html">SMS Opt-In Policy</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/sms-privacy-policy.html">SMS Privacy Policy</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/site-privacy-policy.html">Site Privacy Policy</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/terms.html">Terms</a>
+    </nav>
+  </footer>
 </body>
 </html>
-
-<footer class="site-footer">
-  <nav class="legal-links">
-    <a href="/sms-opt-in.html">SMS Opt-In Policy</a>
-    <span aria-hidden="true"> · </span>
-    <a href="/sms-privacy-policy.html">SMS Privacy Policy</a>
-    <span aria-hidden="true"> · </span>
-  </nav>
-</footer>
-
-<style>
-/* NAV + HEADER REPAIR KIT */
-.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#111}
-.site-header a{color:#111;text-decoration:none}
-.site-header a:hover{text-decoration:underline}
-.hero::before,.hero::after,.hero .overlay{pointer-events:none}
-.hero::before,.hero::after{z-index:0}
-.site-header{z-index:10}
-.site-header,.site-header *{mix-blend-mode:normal!important;filter:none!important}
-*{box-sizing:border-box}
-html,body{width:100%;overflow-x:hidden}
-.site-header .inner{max-width:1200px;margin:0 auto;padding:12px clamp(16px,2.5vw,24px);display:flex;align-items:center;gap:16px;padding-right:max(16px,env(safe-area-inset-right));padding-left:max(16px,env(safe-area-inset-left))}
-.site-logo{flex:0 0 auto}
-.site-nav{margin-left:auto;display:flex;gap:clamp(10px,1.5vw,20px);align-items:center;flex-wrap:wrap}
-.site-nav a{padding:.45rem .7rem;border-radius:10px}
-.site-nav a:hover{background:#f3f4f6}
-.w-100vw,.full-bleed{width:100%!important}
-</style>
-
